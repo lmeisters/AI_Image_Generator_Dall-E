@@ -1,9 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
     font-family: "Inter", sans-serif;
+}
+
+h1 {
+    font-family: "Manrope", sans-serif;
 }
 
 @media screen and (min-width: 480px) {
@@ -25,4 +31,15 @@
 img {
     filter: invert(98%) sepia(100%) saturate(7%) hue-rotate(168deg)
         brightness(102%) contrast(105%);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container-snap::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.container-snap {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }

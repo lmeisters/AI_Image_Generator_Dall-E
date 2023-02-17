@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import { Card, FormField, Loader } from "../components";
 
+import "../index.css";
+
 const RenderCards = ({ data, title }) => {
     if (data?.length > 0) {
         return data.map((post) => <Card key={post._id} {...post} />);
@@ -19,8 +21,8 @@ const Home = () => {
     const [allPosts, setAllPosts] = useState(null);
 
     const [searchText, setSearchText] = useState("");
-    const [SearchedResults, setSearchedResults] = useState(null);
     const [searchTimeout, setSearchTimeout] = useState(null);
+    const [searchedResults, setSearchedResults] = useState(null);
 
     const fetchPosts = async () => {
         setLoading(true);
@@ -52,11 +54,12 @@ const Home = () => {
     }, []);
 
     const handleSearchChange = (e) => {
+        clearTimeout(searchTimeout);
         setSearchText(e.target.value);
 
         setSearchTimeout(
             setTimeout(() => {
-                const searchResults = allPosts.filter(
+                const searchResult = allPosts.filter(
                     (item) =>
                         item.name
                             .toLowerCase()
@@ -65,30 +68,106 @@ const Home = () => {
                             .toLowerCase()
                             .includes(searchText.toLowerCase())
                 );
-
-                setSearchedResults(searchResults);
+                setSearchedResults(searchResult);
             }, 500)
         );
     };
 
     return (
         <section>
-            <section className="max-w-7xl mx-auto">
+            <section className="max-w-7xl mx-auto ">
                 <div className="flex flex-col items-center">
-                    <h2 className="text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-gray-50 to-white-50 mt-48">
+                    <h1 className="text-8xl text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-800 mt-44 h-28">
                         AI Image Generation App
-                    </h2>
-                    <p className="text-[#666e75] max-w-lg text-3xm text-center mt-16">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Exercitationem dicta sit repellat non? Illum
-                        suscipit tempore a inventore rerum deleniti nesciunt
-                        iusto consectetur. Magni assumenda minus est at earum
-                        nemo.
+                    </h1>
+                    <p className="text-[#666e75] max-w-lg text-3xm text-center mt-12">
+                        Create realistic images and art from a description in
+                        natural language with the help of DALL·E 2 new AI system
                     </p>
                 </div>
             </section>
-            <div className="flex mt-32 overflow-auto">
-                <div
+
+            <div className="flex mt-32 ">
+                <div class="relative flex overflow-x-hidden">
+                    <div class="py-12 animate-marquee-infinite whitespace-nowrap">
+                        <span class="text-4xl mx-4 text-white">
+                            Marquee Item 1
+                        </span>
+                        <span class="text-4xl mx-4 text-white">
+                            Marquee Item 2
+                        </span>
+                        <span class="text-4xl mx-4 text-white">
+                            Marquee Item 3
+                        </span>
+                        <span class="text-4xl mx-4 text-white">
+                            Marquee Item 4
+                        </span>
+                        <span class="text-4xl mx-4 text-white">
+                            Marquee Item 5
+                        </span>
+                    </div>
+
+                    <div class="absolute top-0 py-12 animate-marquee2 whitespace-nowrap">
+                        <span class="text-4xl mx-4 text-white">
+                            Marquee Item 1
+                        </span>
+                        <span class="text-4xl mx-4 text-white">
+                            Marquee Item 2
+                        </span>
+                        <span class="text-4xl mx-4 text-white">
+                            Marquee Item 3
+                        </span>
+                        <span class="text-4xl mx-4 text-white">
+                            Marquee Item 4
+                        </span>
+                        <span class="text-4xl mx-4 text-white">
+                            Marquee Item 5
+                        </span>
+                    </div>
+                </div>
+                {/* <div className="mb-96 ">
+                    <div className="relative w-full overflowx-hidden">
+                        <div className="flex absolute left-0 animate-marquee-infinite ">
+                            <div className="flex overflowx-hidden">
+                                <div
+                                    href="#"
+                                    className="block max-w-sm w-64 h-64 mr-6 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
+                                ></div>
+                                <div
+                                    href="#"
+                                    className="block max-w-sm w-64 h-64 mr-6 my-4 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
+                                ></div>
+                                <div
+                                    href="#"
+                                    className="block max-w-sm w-64 h-64 mr-6 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
+                                ></div>
+                                <div
+                                    href="#"
+                                    className="block max-w-sm w-64 h-64 mr-6 my-4 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
+                                ></div>
+                            </div>
+                            <div className="flex overflowx-hidden">
+                                <div
+                                    href="#"
+                                    className="block max-w-sm w-64 h-64 mr-6 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
+                                ></div>
+                                <div
+                                    href="#"
+                                    className="block max-w-sm w-64 h-64 mr-6 my-4 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
+                                ></div>
+                                <div
+                                    href="#"
+                                    className="block max-w-sm w-64 h-64 mr-6 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
+                                ></div>
+                                <div
+                                    href="#"
+                                    className="block max-w-sm w-64 h-64 mr-6 my-4 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> */}
+                {/* <div
                     href="#"
                     className="block max-w-sm w-32 h-64 mr-6 my-4 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
                 ></div>
@@ -115,14 +194,14 @@ const Home = () => {
                 <div
                     href="#"
                     className="block max-w-sm w-32 h-64 ml-6 my-4 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
-                ></div>
+                ></div> */}
             </div>
 
             <section className="max-w-7xl mx-auto flex flex-col items-center">
                 <div className="block max-w- p-12 bg-white border border-white rounded-lg shadow dark:bg-[#191620] dark:border-gray-700 ">
                     <div className="flex flex-col items-center">
-                        <h1 className="font-extrabold text-[#ffffff] text-[32px]">
-                            The Community Showcase
+                        <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-800 text-center">
+                            Community Showcase
                         </h1>
                         <p className="mt-4 text-[#666e75] text-[14px] max-w-[500px] text-center">
                             Browse through a collection of imaginative and
@@ -160,8 +239,8 @@ const Home = () => {
                                 <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3">
                                     {searchText ? (
                                         <RenderCards
-                                            data={SearchedResults}
-                                            title="No search results found"
+                                            data={searchedResults}
+                                            title="No Search Results Found"
                                         />
                                     ) : (
                                         <RenderCards

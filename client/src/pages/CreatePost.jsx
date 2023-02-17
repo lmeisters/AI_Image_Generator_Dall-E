@@ -17,9 +17,8 @@ const CreatePost = () => {
     const [generatingImg, setGeneratingImg] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const handleChange = (e) => {
+    const handleChange = (e) =>
         setForm({ ...form, [e.target.name]: e.target.value });
-    };
 
     const handleSurpriseMe = () => {
         const randomPrompt = getRandomPrompt(form.prompt);
@@ -93,7 +92,7 @@ const CreatePost = () => {
         <section className="max-w-7xl mx-auto flex flex-col items-center">
             <div className="block px-72 py-16 pb-32 bg-white border border-white rounded-lg shadow dark:bg-[#141516] dark:border-gray-700 ">
                 <div>
-                    <h1 className="text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-gray-50 to-white-50 text-center">
+                    <h1 className="text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-800 text-center">
                         Create
                     </h1>
                     <p className="mt-6 text-[#666e75] text-[14px] text-center">
