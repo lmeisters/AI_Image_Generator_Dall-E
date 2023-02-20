@@ -75,131 +75,48 @@ const Home = () => {
 
     return (
         <section>
-            <section className="max-w-7xl mx-auto ">
-                <div className="flex flex-col items-center">
-                    <h1 className="text-8xl text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-800 mt-44 h-28">
+            <section className="max-w-7xl mx-auto">
+                <div className="flex flex-col items-center overflow-hidden">
+                    <h1 className="text-8xl text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-800 mt-44 h-28 drop-in">
                         AI Image Generation App
                     </h1>
-                    <p className="text-[#666e75] max-w-lg text-3xm text-center mt-12">
+                    <p className="text-[#666e75] max-w-lg text-3xm text-center mt-12 drop-in-2">
                         Create realistic images and art from a description in
                         natural language with the help of DALL·E 2 new AI system
                     </p>
                 </div>
             </section>
 
-            <div className="flex mt-32 ">
-                <div class="relative flex overflow-x-hidden">
-                    <div class="py-12 animate-marquee-infinite whitespace-nowrap">
-                        <span class="text-4xl mx-4 text-white">
-                            Marquee Item 1
-                        </span>
-                        <span class="text-4xl mx-4 text-white">
-                            Marquee Item 2
-                        </span>
-                        <span class="text-4xl mx-4 text-white">
-                            Marquee Item 3
-                        </span>
-                        <span class="text-4xl mx-4 text-white">
-                            Marquee Item 4
-                        </span>
-                        <span class="text-4xl mx-4 text-white">
-                            Marquee Item 5
-                        </span>
-                    </div>
-
-                    <div class="absolute top-0 py-12 animate-marquee2 whitespace-nowrap">
-                        <span class="text-4xl mx-4 text-white">
-                            Marquee Item 1
-                        </span>
-                        <span class="text-4xl mx-4 text-white">
-                            Marquee Item 2
-                        </span>
-                        <span class="text-4xl mx-4 text-white">
-                            Marquee Item 3
-                        </span>
-                        <span class="text-4xl mx-4 text-white">
-                            Marquee Item 4
-                        </span>
-                        <span class="text-4xl mx-4 text-white">
-                            Marquee Item 5
-                        </span>
-                    </div>
-                </div>
-                {/* <div className="mb-96 ">
-                    <div className="relative w-full overflowx-hidden">
-                        <div className="flex absolute left-0 animate-marquee-infinite ">
-                            <div className="flex overflowx-hidden">
-                                <div
-                                    href="#"
-                                    className="block max-w-sm w-64 h-64 mr-6 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
-                                ></div>
-                                <div
-                                    href="#"
-                                    className="block max-w-sm w-64 h-64 mr-6 my-4 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
-                                ></div>
-                                <div
-                                    href="#"
-                                    className="block max-w-sm w-64 h-64 mr-6 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
-                                ></div>
-                                <div
-                                    href="#"
-                                    className="block max-w-sm w-64 h-64 mr-6 my-4 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
-                                ></div>
-                            </div>
-                            <div className="flex overflowx-hidden">
-                                <div
-                                    href="#"
-                                    className="block max-w-sm w-64 h-64 mr-6 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
-                                ></div>
-                                <div
-                                    href="#"
-                                    className="block max-w-sm w-64 h-64 mr-6 my-4 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
-                                ></div>
-                                <div
-                                    href="#"
-                                    className="block max-w-sm w-64 h-64 mr-6 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
-                                ></div>
-                                <div
-                                    href="#"
-                                    className="block max-w-sm w-64 h-64 mr-6 my-4 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
-                {/* <div
+            <div className="flex mb-56 mt-16 w-full justify-center overflow-hidden">
+                <div
                     href="#"
-                    className="block max-w-sm w-32 h-64 mr-6 my-4 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
+                    className="block max-w-sm w-64 h-64 mr-6 my-40 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700 drop-in-2"
                 ></div>
                 <div
                     href="#"
-                    className="block max-w-sm w-64 h-64 mx-6 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
+                    className="block max-w-sm w-64 h-64 mr-6 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700 drop-in-2"
                 ></div>
                 <div
                     href="#"
-                    className="block max-w-sm w-64 h-64 mx-6 my-4 bg-white border border-white-100 rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
+                    className="block max-w-sm w-64 h-64 mr-6 my-40 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700 drop-in-2"
                 ></div>
                 <div
                     href="#"
-                    className="block max-w-sm w-64 h-64 mx-6 my-24 bg-white border border-white-100 rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
+                    className="block max-w-sm w-64 h-64 mr-6 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700 drop-in-2"
                 ></div>
                 <div
                     href="#"
-                    className="block max-w-sm w-64 h-64 mx-6 my-4 bg-white border border-white-100 rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
+                    className="block max-w-sm w-64 h-64 mr-6 my-40 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700 drop-in-2"
                 ></div>
                 <div
                     href="#"
-                    className="block max-w-sm w-64 h-64 mx-6 my-24 bg-white border border-white-100 rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
+                    className="block max-w-sm w-64 h-64 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700 drop-in-2"
                 ></div>
-                <div
-                    href="#"
-                    className="block max-w-sm w-32 h-64 ml-6 my-4 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700"
-                ></div> */}
             </div>
 
-            <section className="max-w-7xl mx-auto flex flex-col items-center">
-                <div className="block max-w- p-12 bg-white border border-white rounded-lg shadow dark:bg-[#191620] dark:border-gray-700 ">
-                    <div className="flex flex-col items-center">
+            <section className="max-w-7xl mx-auto flex flex-col items-center overflow-hidden">
+                <div className="block w-full p-12 bg-white border border-white rounded-lg shadow dark:bg-[#191620] dark:border-gray-700">
+                    <div className="flex flex-col items-center mt-5">
                         <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-800 text-center">
                             Community Showcase
                         </h1>
@@ -220,7 +137,7 @@ const Home = () => {
                         />
                     </div>
 
-                    <div className="mt-10">
+                    <div className="mt-10 drop-in">
                         {loading ? (
                             <div className="flex justify-center items-center">
                                 <Loader />

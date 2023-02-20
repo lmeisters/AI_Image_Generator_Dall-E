@@ -33,13 +33,23 @@ img {
         brightness(102%) contrast(105%);
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.container-snap::-webkit-scrollbar {
-    display: none;
+/*Fade in*/
+
+.drop-in {
+    animation: drop-in 1s ease 200ms backwards;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.container-snap {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+.drop-in-2 {
+    animation: drop-in 1200ms ease 500ms backwards;
+}
+
+@keyframes drop-in {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
 }
