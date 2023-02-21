@@ -2,7 +2,13 @@ import React, { useState, useEffect } from "react";
 
 import { Card, FormField, Loader } from "../components";
 
-import "../index.css";
+import image1 from "../assets/images/1.webp";
+import image2 from "../assets/images/2.webp";
+import image3 from "../assets/images/3.webp";
+import image4 from "../assets/images/4.webp";
+import image5 from "../assets/images/5.webp";
+import image6 from "../assets/images/6.webp";
+import image7 from "../assets/images/7.webp";
 
 const RenderCards = ({ data, title }) => {
     if (data?.length > 0) {
@@ -77,52 +83,67 @@ const Home = () => {
         <section>
             <section className="max-w-7xl mx-auto">
                 <div className="flex flex-col items-center overflow-hidden">
-                    <h1 className="text-8xl text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-800 mt-44 h-28 drop-in">
+                    <h1 className="sm:text-8xl text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-800 mt-44 drop-in text-center pb-3 text-5xl">
                         AI Image Generation App
                     </h1>
                     <p className="text-[#666e75] max-w-lg text-3xm text-center mt-12 drop-in-2">
                         Create realistic images and art from a description in
-                        natural language with the help of DALL·E 2 new AI system
+                        natural language with the help of DALL·E 2 new AI
+                        system. See the already created AI art gallery below or
+                        create your own unique image
                     </p>
                 </div>
             </section>
 
-            <div className="flex mb-56 mt-16 w-full justify-center overflow-hidden">
-                <div
-                    href="#"
-                    className="block max-w-sm w-64 h-64 mr-6 my-40 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700 drop-in-2"
-                ></div>
-                <div
-                    href="#"
-                    className="block max-w-sm w-64 h-64 mr-6 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700 drop-in-2"
-                ></div>
-                <div
-                    href="#"
-                    className="block max-w-sm w-64 h-64 mr-6 my-40 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700 drop-in-2"
-                ></div>
-                <div
-                    href="#"
-                    className="block max-w-sm w-64 h-64 mr-6 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700 drop-in-2"
-                ></div>
-                <div
-                    href="#"
-                    className="block max-w-sm w-64 h-64 mr-6 my-40 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700 drop-in-2"
-                ></div>
-                <div
-                    href="#"
-                    className="block max-w-sm w-64 h-64 my-24 bg-white border border-white rounded-lg shadow hover:bg-gray-100 dark:bg-[#191620] dark:border-gray-700 dark:hover:bg-gray-700 drop-in-2"
-                ></div>
+            <div className="flex sm:mb-56 mb-28 mt-16 pb-4 w-full justify-center overflow-hidden drop-in-2">
+                <img
+                    src={image7}
+                    y
+                    alt="image"
+                    className="2xl:block w-60 h-60 2xl:mr-6 mt-40 hidden bg-white border border-white rounded-lg shadow dark:bg-[#191620] dark:border-gray-700"
+                />
+                <img
+                    src={image5}
+                    alt="image"
+                    className="lg:block hidden w-60 h-60 mr-6 mt-24 bg-white border border-white rounded-lg shadow dark:bg-[#191620] dark:border-gray-700"
+                />
+                <img
+                    src={image2}
+                    alt="image"
+                    className="block w-auto sm:h-60 h-28 mr-6 sm:mt-40 mt-32 bg-white border border-white rounded-lg shadow dark:bg-[#191620] dark:border-gray-700"
+                />
+                <img
+                    src={image1}
+                    alt="image"
+                    className="block w-auto sm:h-60 h-28 sm:mt-24 mt-24 mr-6 bg-white border border-white rounded-lg shadow dark:bg-[#191620] dark:border-gray-700"
+                />
+
+                <img
+                    src={image3}
+                    alt="image"
+                    className="block w-auto sm:h-60 h-28 lg:mr-6 sm:mt-40 mt-32 bg-white border border-white rounded-lg shadow dark:bg-[#191620] dark:border-gray-700"
+                />
+                <img
+                    src={image4}
+                    alt="image"
+                    className="lg:block hidden w-60 h-60 2xl:mr-6 mt-24 bg-white border border-white rounded-lg shadow dark:bg-[#191620] dark:border-gray-700"
+                />
+                <img
+                    src={image6}
+                    alt="image"
+                    className="2xl:block md:w-60 md:h-60 w-0 h-0 mt-40 hidden bg-white border border-white rounded-lg shadow dark:bg-[#191620] dark:border-gray-700"
+                />
             </div>
 
             <section className="max-w-7xl mx-auto flex flex-col items-center overflow-hidden">
                 <div className="block w-full p-12 bg-white border border-white rounded-lg shadow dark:bg-[#191620] dark:border-gray-700">
                     <div className="flex flex-col items-center mt-5">
-                        <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-800 text-center">
+                        <h1 className="sm:text-5xl text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-800 text-center">
                             Community Showcase
                         </h1>
                         <p className="mt-4 text-[#666e75] text-[14px] max-w-[500px] text-center">
-                            Browse through a collection of imaginative and
-                            visually stunning images generated by DALL-E AI
+                            Browse through a collection of images created by
+                            user prompts and generated by DALL-E AI
                         </p>
                     </div>
 
