@@ -95,7 +95,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <div className="flex sm:mb-56 mb-28 mt-16 pb-4 w-full justify-center overflow-hidden drop-in-2">
+            <div className="flex sm:mb-56 mb-28 mt-16 pb-4 w-full justify-center overflow-hidden drop-in-2 z-20">
                 <img
                     src={image7}
                     y
@@ -166,9 +166,9 @@ const Home = () => {
                         ) : (
                             <>
                                 {searchText && (
-                                    <h2 className="font-medium text-[#666e75] text-xl mb-3">
-                                        Showing Resuls for{" "}
-                                        <span className="text-[#ffffff]">
+                                    <h2 className="font-medium text-[#ffffff] text-xl mb-3">
+                                        Showing resuls for{" "}
+                                        <span className="text-[#ffffff] font-bold">
                                             {searchText}
                                         </span>
                                         :

@@ -105,11 +105,11 @@ const CreatePost = () => {
                 </div>
 
                 <form
-                    className="mt-16 max-w-3xl drop-in-2"
+                    className="mt-16 max-w-3xl drop-in-2 items-center"
                     onSubmit={handleSubmit}
                 >
-                    <div className="flex lg:flex-row flex-col items-center gap-10">
-                        <div className="flex flex-col gap-10 sm:w-96 w-72">
+                    <div className="flex lg:flex-row flex-col gap-10 items-center sm:items-start">
+                        <div className="flex flex-col gap-10 sm:w-96 w-72 ">
                             <FormField
                                 labelName="Your Name"
                                 type="text"
@@ -151,7 +151,7 @@ const CreatePost = () => {
                         </div>
 
                         <div className="flex flex-col">
-                            <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:w-96 p-3 sm:h-96 flex justify-center items-center">
+                            <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:w-96 p-3 sm:h-96 flex justify-center items-center dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                 {form.photo ? (
                                     <img
                                         src={form.photo}
@@ -162,7 +162,7 @@ const CreatePost = () => {
                                     <img
                                         src={preview}
                                         alt="preview"
-                                        className="w-9/12 h-9/12 object-contain opacity-40"
+                                        className="w-9/12 h-9/12 object-contain opacity-90"
                                     />
                                 )}
 

@@ -24,6 +24,7 @@ const App = () => (
                 </span>
             </Link>
         </header>
+
         <main className="sm:p-8 px-4 py-8 w-full bg-[#161111] min-h-[calc(100vh-68px)] ">
             <Routes>
                 <Route path="/" element={<Home />} />
