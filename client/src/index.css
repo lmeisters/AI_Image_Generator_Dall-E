@@ -5,8 +5,11 @@
 @tailwind utilities;
 
 :root {
-    --primary: #161111;
-    --secondary: gray;
+    /* --primary: #161111;
+    --secondary: gray; */
+    --primary: #020102;
+    --secondary: #241b35;
+    --pink: #cb80ff;
 }
 
 * {
@@ -18,7 +21,7 @@ h1 {
 }
 
 @media screen and (min-width: 480px) {
-    .card:nth-child(7n + 1) {
+    .showcase:nth-child(7n + 1) {
         grid-column: auto/span 2;
         grid-row: auto/span 2;
     }
@@ -46,6 +49,10 @@ h1 {
 
 .drop-in-2 {
     animation: drop-in 1200ms ease 500ms backwards;
+}
+
+.drop-in-3 {
+    animation: drop-in 1400ms ease 600ms backwards;
 }
 
 @keyframes drop-in {
@@ -78,4 +85,72 @@ h1 {
     background-color: var(--secondary);
     border-radius: 14px;
     border: 3px solid var(--primary);
+}
+
+/* Img card hover effect */
+.card {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+#hovers:hover > .hover::after {
+    opacity: 1;
+}
+
+.hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    height: 260px;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+}
+
+.hover:hover::before {
+    opacity: 1;
+}
+
+.hover::before,
+.hover::after {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+}
+
+.hover::before {
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    z-index: 3;
+}
+
+.hover::after {
+    background: radial-gradient(
+        600px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.4),
+        transparent 40%
+    );
+    z-index: 1;
+}
+
+.hover > .hover-content {
+    background-color: black;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    inset: 1px;
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
 }

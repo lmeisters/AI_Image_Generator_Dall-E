@@ -4,9 +4,9 @@ import { download } from "../assets";
 import { downloadImage } from "../utils";
 
 const Card = ({ _id, name, prompt, photo }) => (
-    <div className="rounded-xl group relative shadow-card hover:shadow-cardhover card">
+    <div className="rounded-xl group relative shadow-card hover:shadow-cardhover showcase overflow-hidden">
         <img
-            className="w-full h-auto object-cover rounded-xl"
+            className="w-full h-auto object-cover rounded-xl hover:scale-110 ease-in duration-700"
             src={photo}
             alt={prompt}
         />

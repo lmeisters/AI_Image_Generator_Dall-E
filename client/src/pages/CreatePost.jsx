@@ -92,7 +92,7 @@ const CreatePost = () => {
         <section className="max-w-7xl mx-auto flex flex-col items-center">
             <div className="flex flex-col items-center overflow-hidden 2xl:px-72 sm:px-20 px-3 ease-in duration-100 pt-16 sm:pb-28 pb-3 bg-white border border-white rounded-lg shadow dark:bg-[#141516] dark:border-gray-700 drop-in">
                 <div className="drop-in">
-                    <h1 className="sm:text-7xl text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-gray-100 to-gray-800 text-center">
+                    <h1 className="sm:text-7xl text-5xl font-extrabold animate-text bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent text-center">
                         Create
                     </h1>
                     <p className="mt-6 text-[#666e75] text-[14px] text-center">
@@ -100,7 +100,7 @@ const CreatePost = () => {
                         DALL-E AI and share them on the website. Just enter your
                         name, prompt or use one of the many pre-determined
                         prompts with the "Surprise me" button and generate your
-                        image.
+                        image.green
                     </p>
                 </div>
 
@@ -133,11 +133,13 @@ const CreatePost = () => {
                                 <button
                                     type="button"
                                     onClick={generateImage}
-                                    className=" text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800"
+                                    class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br  from-purple-500  via-pink-500 to-orange-400 group-hover:from-purple-500 group-hover:via-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 animate-text"
                                 >
-                                    {generatingImg
-                                        ? "Generating..."
-                                        : "Generate"}
+                                    <span class="relative px-36 max-md:px-28 min-[640px]:px-40 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 animate-text">
+                                        {generatingImg
+                                            ? "Generating..."
+                                            : "Generate"}
+                                    </span>
                                 </button>
                                 <button
                                     type="submit"
@@ -151,7 +153,7 @@ const CreatePost = () => {
                         </div>
 
                         <div className="flex flex-col">
-                            <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:w-96 p-3 sm:h-96 flex justify-center items-center dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                            <div className="relative border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-700 focus:border-purple-800 sm:w-96 p-3 sm:h-96 flex justify-center items-center dark:bg-[#141516] dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                 {form.photo ? (
                                     <img
                                         src={form.photo}
