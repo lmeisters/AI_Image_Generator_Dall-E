@@ -23,5 +23,3 @@ This project is an AI image generator application built using React, Node.js, Ex
    - Scroll to the "Community Showcase" section.
    - Browse the collection of AI-generated images.
    - Use the search bar to find specific images by user name or prompt keywords.
-
-This documentation provides a basic overview of the AI image generator application. Refer to the individual code files for more detailed information on specific functionalities and implementations.
