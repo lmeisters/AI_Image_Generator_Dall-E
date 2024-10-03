@@ -4,6 +4,10 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { logo } from "./assets";
 import { Home, CreatePost } from "./pages";
 
+/**
+ * Renders the main application component with routing
+ * @returns {JSX.Element} The rendered App component with header, routing, and main content area
+ */
 const App = () => (
     <BrowserRouter>
         <header className="w-full flex bg-[#020102] 2xl:px-40 px-4 py-4">
