@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ * Renders a loading spinner component
+ * @returns {JSX.Element} A div containing an SVG spinner animation
+ */
 const Loader = () => (
     <div role="status">
         <svg
