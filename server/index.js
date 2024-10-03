@@ -15,6 +15,19 @@ app.use(express.json({ limit: "50mb" }));
 app.use("/api/v1/post", postRoutes);
 app.use("/api/v1/dalle", dalleRoutes);
 
+/**
+ * Handles GET requests to the root endpoint
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ * @returns {Object} JSON response with a greeting message
+ */
+```
+/**
+ * Starts the server and connects to the database
+ * @param {void} - This function doesn't take any parameters
+ * @returns {Promise<void>} A promise that resolves when the server is started and database is connected
+ */
+```
 app.get("/", async (req, res) => {
     res.status(200).json({
         message: "Hello from DALL-E",

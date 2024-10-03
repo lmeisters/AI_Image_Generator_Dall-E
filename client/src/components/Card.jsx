@@ -3,6 +3,15 @@ import React from "react";
 import { download } from "../assets";
 import { downloadImage } from "../utils";
 
+/**
+ * Renders a Card component displaying an image with hover effects and additional information.
+ * @param {Object} props - The properties passed to the component.
+ * @param {string} props._id - The unique identifier for the card.
+ * @param {string} props.name - The name of the card creator.
+ * @param {string} props.prompt - The prompt or description of the image.
+ * @param {string} props.photo - The URL of the image to display.
+ * @returns {JSX.Element} A card component with image, hover effects, and download functionality.
+ */
 const Card = ({ _id, name, prompt, photo }) => (
     <div className="rounded-xl group relative shadow-card hover:shadow-cardhover showcase overflow-hidden">
         <img
