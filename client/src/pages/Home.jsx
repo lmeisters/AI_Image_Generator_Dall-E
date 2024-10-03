@@ -7,6 +7,13 @@ import image2 from "../assets/images/1.webp";
 import image3 from "../assets/images/4.webp";
 import image1 from "../assets/images/7.webp";
 
+/**
+ * Renders a list of cards or a title based on the provided data
+ * @param {Object} options - The options for rendering
+ * @param {Array} options.data - The array of post data to render as cards
+ * @param {string} options.title - The title to display if no data is available
+ * @returns {JSX.Element} Either a list of Card components or a title heading
+ */
 const RenderCards = ({ data, title }) => {
     if (data?.length > 0) {
         return data.map((post) => <Card key={post._id} {...post} />);
@@ -19,6 +26,10 @@ const RenderCards = ({ data, title }) => {
     );
 };
 
+/**
+ * Home component that displays an AI Image Generation Application homepage
+ * @returns {JSX.Element} The rendered Home component
+ */
 const Home = () => {
     const [loading, setLoading] = useState(false);
     const [allPosts, setAllPosts] = useState(null);
