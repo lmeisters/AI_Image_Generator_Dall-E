@@ -159,19 +159,18 @@ const Home = () => {
 
     return (
         <section>
-            {/* <section className="bg"> */}
             <section className="max-w-10xl 2xl:mx-32 flex justify-between sm:mb-56 mb-28 max-md:flex-wrap">
                 <div className="flex flex-col overflow-hidden drop-in text-center md:text-start items-center md:items-start">
-                    <h1 className="sm:text-7xl mt-44 pb-3 text-5xl max-w-xl animate-text bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent">
+                    <h1 className="sm:text-7xl mt-16 md:mt-44 text-5xl max-w-xl animate-text bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 bg-clip-text text-transparent">
                         AI Image Generation Application
                     </h1>
-                    <p className="text-[#666e75] max-w-lg text-3xm mt-12 drop-in-2">
+                    <p className="text-[#666e75] max-w-lg text-3xm mt-4 drop-in-2">
                         Create realistic images and art from a description in
                         natural language with the help of DALL·E 2 new AI
                         system. See the already created AI art gallery below or
                         create your own unique image
                     </p>
-                    <div className="flex gap-5 mt-16 max-w-xs drop-in-3">
+                    <div className="flex gap-5 mt-10 max-w-xs drop-in-3">
                         <button
                             type="button"
                             onClick={handleClick}

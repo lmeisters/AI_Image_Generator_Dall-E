@@ -8,8 +8,7 @@
         "node": ">=16.20.1"
     },
     "scripts": {
-        "start": "node index.js",
-        "build": "cd ../client && npm install && npm run build && cd ../server && npm install"
+        "start": "nodemon index"
     },
     "keywords": [],
     "author": "",
